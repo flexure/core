@@ -1,0 +1,43 @@
+{
+	"name": "@flexure/core",
+	"version": "0.0.1",
+	"description": "Library for App",
+	"source": "src/index.ts",
+	"main": "dist/index.js",
+	"module": "dist/index.modern.js",
+	"types": "dist/index.d.ts",
+	"umd:main": "dist/foo.umd.js",
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com/"
+	},
+	"scripts": {
+		"build": "microbundle-crl --no-compress --format modern,cjs --target web",
+		"build:core": "microbundle-crl --no-compress --format modern,cjs --target web",
+		"watch": "microbundle-crl watch --no-compress --format modern,cjs",
+		"watch:core": "microbundle-crl watch --no-compress --format modern,cjs"
+	},
+	"author": "Ronald Manzano",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/jest": "^25.2.3",
+		"@types/lodash": "^4.14.154",
+		"@types/react": "^16.9.35",
+		"jest": "^26.0.1",
+		"microbundle-crl": "^0.13.11",
+		"react": "^16.13.1",
+		"react-test-renderer": "^16.13.1",
+		"ts-jest": "^26.0.0",
+		"tslib": "^2.0.0",
+		"typescript": "^3.9.3"
+	},
+	"jest": {
+		"preset": "ts-jest",
+		"testEnvironment": "node"
+	},
+	"files": [
+		"dist"
+	],
+	"dependencies": {
+		"@flexure/common": "^0.0.2"
+	}
+}
